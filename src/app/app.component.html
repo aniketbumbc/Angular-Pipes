@@ -1,3 +1,21 @@
-<h1>
-  {{title}}
-</h1>
+<h1 align="center">{{asynvalue|async}}</h1>
+<h2> Build in pipes</h2>
+<p id="para1">
+  Name: {{myName|uppercase}} <br>
+  Date: {{myDate|date:"mm-dd-yyyy"}}<br>
+  Value: {{myValue|slice:3:14|uppercase}}
+</p>
+<h1> Custom Pipes</h1>
+<input type="text" #input (keyup)="0"> <!-- tell angular to update UI) -->
+<h2> Cube Value:- {{input.value|tripple}}</h2>
+<hr>
+<input type="text" #neit>
+<button (click)="(values.push(neit.value))"> Add Item </button>
+<ul>
+  hello
+  <li *ngFor="let item of values |filter:'Z'">{{item}}</li>
+
+</ul>
+<hr>
+<h2> Async Pipe See into Header</h2>
+
